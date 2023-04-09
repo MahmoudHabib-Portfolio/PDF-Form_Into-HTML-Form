@@ -1,0 +1,102 @@
+.timepicker-panel {
+    padding: 50px;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+    max-width: 350px;
+}
+
+body .nj-timepick {
+    --nj-timepick-primary: #cecece;
+}
+
+.timepicker-panel .form-item:not(:last-child){
+    margin: 0 0 30px;
+}
+
+.timepicker-panel .help-block{
+    color: #4d4d4d;
+    font-size: 12px;
+    margin: 6px 0;
+}
+.timepicker-panel .control-label {
+    margin-right: 10px;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+.nj-timepick-input {
+    outline: 0 !important;
+}
+.nj-timepick__panel {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 6px 8px 2px rgb(0, 0, 0, 0.2);
+}
+.nj-timepick {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5000;
+    /*
+    transition: right 0.7s ease;
+    */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.nj-timepick--active {
+    right: 0;
+}
+.nj-timepick__boxes-column {
+    width: 50px;
+    overflow: hidden;
+}
+
+.nj-timepick__boxes {
+    /* height: 260px; */
+    height: 220px;
+    overflow: auto;
+}
+.nj-timepick__boxes::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nj-timepick__boxes {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+.nj-timepick__box {
+    cursor: pointer;
+    border: 2px solid transparent;
+    /* margin: 2px; */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nj-timepick__box--active {
+    font-weight: 700;
+    border: 2px solid #000;
+    background-color: var(--nj-timepick-primary);
+}
+.nj-timepick-input--active {
+    border: 1px solid #000;
+}
+
+.close{
+    background-color: #333 !important;
+    color: #fff !important;
+    font-family: sans-serif;
+}

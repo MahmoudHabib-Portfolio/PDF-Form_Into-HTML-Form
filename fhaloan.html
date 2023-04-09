@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <title>FHA/VA LOAN ADDENDUM</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" async />
+    <link rel="stylesheet" href="CssLibrary/jquery.timepicker.min.css" async />
+    <link rel="stylesheet" href="CssLibrary/jqueryscripttop.css" async />
+    <link rel="stylesheet" href="CssLibrary/nj-timepick.css" async />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" async />
+
+    <script src="JQueryLibrary/jquery-1.12.4.js"></script>
+    <script src="JQueryLibrary/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    
+
+      <script>
+      $( function() {
+        $( "#datepicker" ).datepicker({
+          dateFormat: "dd/mm/yy",
+          changeYear: true,
+          changeMonth: true,
+          showAnim: "puff"
+        });
+      } );
+      </script>
+
+      <script>
+      $( function() {
+        $( "#datepicker2" ).datepicker({
+          dateFormat: "dd/mm/yy",
+          changeYear: true,
+          changeMonth: true,
+          showAnim: "puff"
+        });
+      } );
+      </script>
+
+      <script>
+      $( function() {
+        $( "#datepicker3" ).datepicker({
+          dateFormat: "dd/mm/yy",
+          changeYear: true,
+          changeMonth: true,
+          showAnim: "puff"
+        });
+      } );
+      </script>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+.spectxt1{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 15px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: center !important;
+    padding: 0px 0px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.spectxt2{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 2px solid #000;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 18%;
+    text-align: center !important;
+    cursor: pointer;
+    color: rgb(118, 118, 118) !important;
+}
+
+
+.spectxt3{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 25%;
+    text-align: center !important;
+    cursor: pointer;
+    color: rgb(118, 118, 118) !important;
+}
+
+.txt1{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 4px solid #000;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 8%;
+}
+
+.txt2{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: center!important;
+    width: 20%;
+    padding: 3px 0px;
+    color: rgb(118, 118, 118) !important;
+}
+
+.txt3{
+     border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: center !important;
+    width: 6%;
+    padding: 3px 0px;
+    color: rgb(118, 118, 118) !important;
+}
+
+.txt4{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 50%;
+}
+
+.txt5{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 32%;
+}
+
+.txt6{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 16px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 60%;
+}
+
+.txt7{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 12px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 7%;
+}
+
+.txt8{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 10%;
+}
+
+.txt9{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: none !important;
+    font-size: 15px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 23%;
+    cursor: pointer;
+    color: rgb(118, 118, 118) !important;
+    box-sizing: border-box;
+}
+
+.txt10{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 7%;
+}
+
+.txt11{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 7%;
+}
+
+.txt12{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 72%;
+}
+
+.txt13{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 19%;
+}
+
+.txt14{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 19%;
+}
+
+.txt15{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 20%;
+}
+
+.txt16{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 66%;
+}
+
+.txt17{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 100%;
+}
+
+.txt18{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 93%;
+}
+
+.txt19{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 85%;
+}
+
+.txt20{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 85%;
+}
+
+.txt21{
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    font-size: 13px;
+    outline: none !important;
+    font-weight: bolder;
+    text-align: left !important;
+    width: 91%;
+}
+
+/* The container */
+.Contee {
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+/* Hide the browser's default checkbox */
+.Contee input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.Contee:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Contee input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.Contee input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.Contee .checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.MainHead3{
+    font-family: sans-serif;
+}
+.MainHead4{
+    font-family: sans-serif;
+}
+
+/* The container2 */
+.Contee2 {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hide the browser's default checkbox */
+.Contee2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.Contee2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Contee2 input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.Contee2 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.Contee2 .checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#sig-canvas {
+  border: 2px dotted #CCCCCC;
+  border-radius: 15px;
+  cursor: url('https://lastpreview.000webhostapp.com/images/pentool.png'), auto;
+  color: rgb(118, 118, 118) !important;
+}
+
+#sig-canvas2 {
+  border: 2px dotted #CCCCCC;
+  border-radius: 15px;
+  cursor: url('https://lastpreview.000webhostapp.com/images/pentool.png'), auto;
+  color: rgb(118, 118, 118) !important;
+}
+
+.modal{
+    max-width: 540px !important;
+    max-height: 460px !important;
+    font-family: sans-serif !important;
+}
+
+    </style>
+<style type="text/css">
+    img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{ display: none; }
+</style>
+</head>
+
+<body bgcolor="#f5f5f5">
+   
+<table class="container" width="925" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;padding: 50px 10px 0px 10px;">
+<tbody>
+<!-- Start First Section 1rst -->
+<tr>
+                                            <td valign="center" class="MainHead" bgcolor="#fff">
+                                                    <div style="text-align: center;font-family: sans-serif;font-weight: bolder;font-size: 18px;padding-left: 5em;">
+                                                    <b>FHA/VA LOAN ADDENDUM</b> &nbsp;&nbsp;&nbsp;#<input class="txt1" type="text" name="dealername" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/> To
+                                                </div>
+                                                <div style="text-align: center;font-family: sans-serif;font-weight: bolder;font-size: 18px;padding-top: 2px;">
+                                                    <b>REAL ESTATE PURCHASE CONTRACT</b>
+                                                </div>
+                                            </td>
+                                        </tr>
+<!-- End First Section 1rst -->
+<!-- Start Second Section 2nd -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 50px;">
+            <b>THIS IS AN ADDENDUM</b> to that REAL ESTATE PURCHASE CONTRACT (the “REPC”) with an Offer Reference Date <b>of</b><input id="datepickone" class="txt2 date" type="text" name="dd/mm" placeholder="dd/mm" maxlength="5" />, 20<input id="datepicktwo" class="txt3 date" type="text" name="yyyy" placeholder="yyyy" maxlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />, including all prior addenda and counteroffers, between
+        </td>
+</tr>
+<!-- End Second Section 2nd -->
+<!-- Start Third Section 3rd -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 0px;">
+            <input type="text" class="txt4" name="PartOne" />as Buyer, and <input type="text" class="txt5" name="PartTwo" />as
+        </td>
+</tr>
+<!-- End Third Section 3rd -->
+<!-- Start Fourth Section 4th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 6px;">
+            Seller, regarding the Property located at<input type="text" class="txt6" name="Address" />. The
+        </td>
+</tr>
+<!-- End Fourth Section 4th -->
+<!-- Start Fifth Section 5th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 6px;">
+            following terms are hereby incorporated as part of the REPC. All references to FHA/VA shall mean the Federal Housing Administration/Department of Veterans Affairs.
+        </td>
+</tr>
+<!-- End Fifth Section 5th -->
+<!-- Start sixth Section 6th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 20px;">
+            1. &nbsp;&nbsp;Buyer intends to occupy the Property as Buyer’s primary residence.
+        </td>
+</tr>
+<!-- End sixth Section 6th -->
+<!-- Start seventh Section 7th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 18px;">
+            2. &nbsp;&nbsp;Buyer is applying for <b>(Check applicable box):</b>
+        </td>
+</tr>
+<!-- End seventh Section 7th -->
+<!-- Start eighth Section 8th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-top: 18px;padding-left: 6em;">
+            [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] an FHA loan; or
+        </td>
+</tr>
+<!-- End eighth Section 8th -->
+<!-- Start ninth Section 9th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding-left: 6em;padding-top: 5px;">
+            [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] a VA loan.
+        </td>
+</tr>
+<!-- End ninth Section 9th -->
+<!-- Start teenth Section 10th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 15px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td style="padding-right: 1em;display: inline-block;">
+                        3.
+                    </td>
+                    <td>
+                        Notwithstanding the Financing & Appraisal Deadline (if applicable), Buyer SHALL NOT be obligated to complete the purchase of the Property or incur any penalty or forfeiture of the Earnest Money Deposit or other down payment, or otherwise be obligated to purchase the Property, if: (a) for a VA loan, the Purchase Price exceeds the reasonable value of the Property established by the VA Certificate of Reasonable Value or VA appraisal; or (b) for an FHA loan, the Purchase Price exceeds the appraised value of the Property (excluding closing costs) established by the FHA appraisal. Buyer shall, however, have the right to complete the sale without regard to the amount of the appraised valuation made by the applicable FHA or the VA. The appraised valuation is used to determine the maximum loan that FHA will insure or VA will guarantee. Neither FHA nor the VA warrants the value or condition of the Property. Buyer should satisfy themselves that the price and condition of the Property are acceptable. Buyer acknowledges that an FHA/VA appraisal does not constitute a property inspection. Seller agrees to cooperate and sign any Lender required documentation that does not substantially alter the rights and obligations of Buyer and Seller set forth in the REPC.
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End teenth Section 10th -->
+<!-- Start twelevnth Section 12th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            4. &nbsp;&nbsp;Seller shall make any and all appraisal required repairs, provided that the cost does not exceed $<input type="text" class="txt7" name="Address" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>
+        </td>
+</tr>
+<!-- End twelevnth Section 12th -->
+<!-- Start thirteenth Section 13th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td style="padding-right: 1em;display: inline-block;">
+                        5.
+                    </td>
+                    <td>
+                       If required by applicable FHA or VA rules, Seller shall furnish Buyer with a current Pest Control Report showing the Property to be free and clear from termite infestation. In the event of termite infestation, Seller shall eradicate the same and repair any damage at Seller’s expense, provided that the cost does not exceed $<input type="text" class="txt8" name="Address" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>. This amount is in addition to any amount indicated in Section 4.
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 13th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td style="padding-right: 1em;display: inline-block;">
+                        6.
+                    </td>
+                    <td>
+                       Seller shall contribute at Settlement an amount to be applied at Buyer’s discretion to any or all of the following: (a) a permanent reduction, or temporary reduction, in the mortgage loan interest rate; (b) mortgage financing costs; and (c) Prepaids/Escrows (“Closing Costs”). The amount of Seller’s contribution shall be $<input type="text" class="txt8" name="Address" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/>. Such contribution shall first be applied to Closing Costs that FHA/VA will not permit Buyer to pay, and any remainder shall be allocated at Buyer’s discretion toward remaining Closing Costs. Seller shall have no further obligation toward Closing Costs. Any unused portion of Seller’s contribution may, at Buyer’s option, be used to reduce the Purchase Price.
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td style="padding-right: 1em;display: inline-block;">
+                        7.
+                    </td>
+                    <td>
+                       [APPLIES TO FHA ONLY] The undersigned hereby certify that the terms of the REPC are true to the best of our knowledge and belief, and that any other agreement entered into by any of the parties has been fully disclosed and is attached to the REPC.
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td style="padding-right: 1em;display: inline-block;">
+                        8.
+                    </td>
+                    <td style="line-height: 1.5;">
+                       If any provision in the REPC or this ADDENDUM is inconsistent with any currently applicable law governing FHA/VA loan transactions, then to the extent of such inconsistency, that law shall govern. To the extent the terms of this ADDENDUM modify or conflict with any provisions of the REPC, including all prior addenda and counteroffers, these terms shall control. All other terms of the REPC, including all prior addenda and counteroffers, not modified by this ADDENDUM shall remain the same. [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] <b>Seller</b> [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] <b>Buyer</b> shall have until <b>[ 07:00 ] AM</b> <b>[ 08:35 ] PM</b> Mountain Time<input id="datepicker" class="spectxt2 date" placeholder="dd/mm/yyyy" type="text" name="date" readonly="readonly" />(Date), to accept the terms of this FHA/VA LOAN ADDENDUM in accordance with the provisions of Section 23 of the REPC. Unless so accepted, the offer as set forth in FHA/VA LOAN ADDENDUM shall lapse.
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:16px;font-family:sans-serif;padding: 10px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;border-bottom: 2px solid #000;">
+                <tr>
+                    <td width="462" style="padding: 5px;text-align: center;font-family: sans-serif;font-size: 16px;">
+                        [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;]
+                        
+                            <a class="spectxt1" href="#ex1" style="text-decoration: none;color: rgb(118, 118, 118) !important;" rel="modal:open">
+                        <img id="sig-image" src="" width="100" style="z-index: 100;" style="display: block;" alt="Click Here To Sign In" />
+                    </a>
+                        <input id="datepicker2" class="spectxt3 date" placeholder="dd/mm/yyyy" type="text" name="date" readonly="readonly" />
+                        <input data-drupal-selector="edit-field-event-time-0-value" aria-describedby="edit-field-event-time-0-value--description"  class="txt9 form-time form-text required form-control" type="time" name="field_event_time[0][value]" id="edit-field-event-time-0-value" placeholder="00:00:AM/PM" value="" />
+                    </td>
+                    <td width="462" style="padding: 5px;text-align: center;font-family: sans-serif;font-size: 16px;">
+                        [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;]
+                        
+                            <a class="spectxt1" href="#ex2" style="text-decoration: none;color: rgb(118, 118, 118) !important;" rel="modal:open">
+                        <img id="sig-image2" src="" width="100" style="z-index: 100;" style="display: block;" alt="Click Here To Sign In" />
+                    </a>
+                        <input id="datepicker3" class="spectxt3 date" placeholder="dd/mm/yyyy" type="text" name="date" readonly="readonly" />
+                        <input data-drupal-selector="edit-field-event-time-0-value" aria-describedby="edit-field-event-time-0-value--description"  class="txt9 form-time form-text required form-control" type="time" name="field_event_time[0][value]" id="edit-field-event-time-0-value" placeholder="00:00:AM/PM" value="" />
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-size:14px;font-family:sans-serif;padding: 0px 0px;">
+            <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
+                <tr>
+                    <td width="462" style="font-family: sans-serif;font-size: 16px;font-weight: bold;">
+                        &nbsp;&nbsp;Seller&nbsp;&nbsp; Seller Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time
+                    </td>
+                    <td width="462" style="ont-family: sans-serif;font-size: 16px;font-weight: bold;">
+                        &nbsp;&nbsp;Seller&nbsp;&nbsp; Seller Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time
+                    </td>
+                </tr>
+            </table>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 15px 10px;">
+           <h4>ACCEPTANCE/COUNTEROFFER/REJECTION</h4>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 0px 10px;font-size: 16px;">
+           CHECK ONE:
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 15px 10px;font-size: 16px;font-weight: bold;">
+           [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;ACCEPTANCE:&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;Seller&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;Buyer <span style="font-weight:normal;">hereby accepts the terms of this FHA/VA LOAN ADDENDUM.</span>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 15px 10px;font-size: 16px;font-weight: bold;">
+           [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;COUNTEROFFER:&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;Seller&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;Buyer <span style="font-weight:normal;line-height: 2;font-size: 13px;">presents as a counteroffer the terms of attached ADDENDUM NO.<input class="txt7" type="text" name="partnumber" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"/></span>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 0px 10px;font-size: 16px;font-weight: bold;">
+           [&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;REJECTION:&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;]&nbsp;&nbsp;&nbsp;&nbsp;Seller&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;<label class="Contee2"><input type="checkbox"><span class="checkmark"></span></label>&nbsp;] &nbsp;&nbsp;Buyer <span style="font-weight:normal;line-height: 2;">rejects the foregoing FHA/VA LOAN ADDENDUM.</span>
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+<!-- Start thirteenth Section 14th -->
+<tr>
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 35px 10px;font-size: 14px;font-weight: bold;">
+            THIS FORM APPROVED BY THE UTAH REAL ESTATE COMMISSION AND THE OFFICE OF THE UTAH ATTORNEY GENERAL, EFFECTIVE NOVEMBER 18, 2020. AS OF JANUARY 1, 2021 IT WILL REPLACE AND SUPERCEDE THE PREVIOUSLY APPROVED VERSION OF THIS FORM.
+        </td>
+</tr>
+<!-- End twelevnth Section 14th -->
+                        </tbody>
+                    </table>
+<!-- Adding First Signature -->
+<textarea id="sig-dataUrl" style="display: none;" rows="5">Data URL for your signature will go here!</textarea>
+<div id="ex1" class="modal">
+  <canvas id="sig-canvas" width="480" height="350">
+                </canvas>
+    <div style="width:100%; padding:35px 0px;text-align: right;">
+    <a href="#" id="sig-submitBtn" rel="modal:close" style="padding:10px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Submit Signature</a>
+    <a href="#&nbsp;" id="sig-clearBtn" style="padding:10px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Clear Signature</a>
+    </div>
+</div>
+
+
+<!-- Adding Second Signature -->
+<textarea id="sig-dataUrl2" style="display: none;" rows="5">Data URL for your signature will go here!</textarea>
+<div id="ex2" class="modal">
+  <canvas id="sig-canvas2" width="480" height="350">
+                </canvas>
+    <div style="width:100%; padding:35px 0px;text-align: right;">
+    <a href="#" id="sig-submitBtn2" rel="modal:close" style="padding:10px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Submit Signature</a>
+    <a href="#&nbsp;" id="sig-clearBtn2" style="padding:10px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Clear Signature</a>
+    </div>
+</div>
+
+
+<script src="JQueryLibrary/jquery.timepicker.min.js"></script>
+<script type="text/javascript" src="JQueryLibrary/signatureaddon.js"></script>
+<script type="text/javascript" src="JQueryLibrary/signatureaddontwo.js"></script>
+<script src="JQueryLibrary/time-picker.js"></script>
+<script>
+  $(document).ready(function(){
+    $('input.timepicker').timepicker({
+    });
+});
+  </script>
+
+</body>
+</html>
