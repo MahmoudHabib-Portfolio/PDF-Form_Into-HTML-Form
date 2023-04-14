@@ -1,3 +1,29 @@
+<?php
+//--->get app url > start
+
+if (isset($_SERVER['HTTPS']) &&
+    ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+    isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
+    $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+  $ssl = 'https';
+}
+else {
+  $ssl = 'http';
+}
+ 
+$app_url = ($ssl  )
+          . "://".$_SERVER['HTTP_HOST']
+          //. $_SERVER["SERVER_NAME"]
+          . (dirname($_SERVER["SCRIPT_NAME"]) == DIRECTORY_SEPARATOR ? "" : "/")
+          . trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
+
+//--->get app url > end
+
+header("Access-Control-Allow-Origin: *");
+
+?>
+
+
 <!DOCTYPE html>
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -10,13 +36,13 @@
     <title>TENNESSEE DEPARTMENT OF REVENUE</title>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
-    <link rel="stylesheet" href="CssLibrary/jquery.timepicker.min.css" />
+    <link rel="stylesheet" href="https://lastpreview.000webhostapp.com/CssLibrary/jquery.timepicker.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
-    <script src="JQueryLibrary/jquery-1.12.4.js"></script>
-    <script src="JQueryLibrary/jquery-ui.js"></script>
+    <script src="https://lastpreview.000webhostapp.com/JQueryLibrary/jquery-1.12.4.js"></script>
+    <script src="https://lastpreview.000webhostapp.com/JQueryLibrary/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    
+
 
       <script>
       $( function() {
@@ -38,10 +64,6 @@
             padding: 0;
         }
 
-        .blocker{
-            overflow: hidden !important;
-        }
-        
 .spectxt1{
     border-top: none !important;
     border-right: none !important;
@@ -451,20 +473,68 @@
 <style type="text/css">
     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{ display: none; }
 </style>
+
+<script src="html2pdf.bundle.min.js" ></script>
+
+<!-- Start Save Document As PDF Form -->
+
+<script type="text/javascript">
+
+    $(document).ready(function($) 
+    { 
+
+        $(document).on('click', '.btn_print', function(event) 
+        {
+            event.preventDefault();
+
+            //credit : https://ekoopmans.github.io/html2pdf.js
+            
+            var element = document.getElementById('container_content'); 
+
+            //easy
+            //html2pdf().from(element).save();
+
+            //custom file name
+            //html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
+
+
+            //more custom settings
+            var opt = 
+            {
+              margin:       0,
+              //filename:     'pageContent_'+js.AutoCode()+'.pdf',
+              image:        { type: 'jpeg', quality: 1 },
+              html2canvas:  { scale: 1 },
+              jsPDF:        { unit: 'in', format: 'a3', orientation: 'portrait' }
+            };
+
+            // New Promise-based usage:
+            html2pdf().set(opt).from(element).save();
+             
+        });
+
+ 
+ 
+    });
+
+    </script>
+
+<!-- End Save Document As PDF Form -->
+
 </head>
 
 <body bgcolor="#f5f5f5">
-   
+    <div id="container_content" id="container_content">
 <table class="container" width="925" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;padding: 25px 10px 0px 10px;">
 <tbody>
 <!-- Start First Section 1rst -->
 <tr>
                                             <td valign="top" class="MainHead" bgcolor="#fff">
-                                                <div style="width:100%; text-align: right;position: relative;top: 115px;left: 0px;">
+                                                <div class="testpdf" style="width:100%; text-align: right;position: relative;top: 115px;left: 0px;">
                                                         <h6 style="margin:0px;">RV- F1315401 (Rev. 01-21)</h6>
                                                     </div>
                                                     <div style="position: relative; top: 20px; left: 0px;">
-                                                    <img src="https://lh5.googleusercontent.com/Irkw6rFogvwZicaIw_NdATdUJoniHPGVmWuuEgMRgZKvo1CHYKBVB0whaXXh0eBc_t0=w2400" width="100" alt="TENNESSEE DEPARTMENT OF REVENUE-Logo" />
+                                                    <img src="<?php echo $app_url?>/f1315401Fill-in.jpg" width="100" alt="TENNESSEE DEPARTMENT OF REVENUE-Logo" />
                                                     </div>
                                                     <div style="text-align: center;">
                                                     <h3 style="margin:0px !important;">TENNESSEE DEPARTMENT OF REVENUE</h3>
@@ -1116,17 +1186,6 @@ signatory to criminal and civil penalties.
                     </table>
                 </td>
             </tr>
-            <tr>
-                <td valign="left">
-                    <table align="center" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0" style="padding:25px 0px;">
-                        <tr>
-                            <td>
-                                <a href="next.html" style="padding:8px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Next >> 2.2</a>
-                            </td>
-                        </tr>    
-                    </table>
-                </td>
-            </tr>
             <!-- End Fifth Section 6.3th -->
             </table>
         </td>
@@ -1134,7 +1193,28 @@ signatory to criminal and civil penalties.
 <!-- End Sixth Section 6th -->
                         </tbody>
                     </table>
-                    
+        </div>
+<table class="container" width="945" align="center" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<!-- Start First Section 1rst -->
+ <tr>
+                <td valign="center">
+                    <table align="center" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0" style="padding:15px 0px;">
+                        <tr>
+                            <td style="padding-right: 12px;">
+                                <a href="next.php" target="_blank" style="padding:8px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;">Next >> 2.2</a>
+                            </td>
+                            <td style="padding-left: 12px;">
+                                <div id="downloadPdfBtn" class="btn_print" style="padding:8px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;cursor: pointer;">Save (PDF)</div>
+                            </td>
+                        </tr>    
+                    </table>
+                </td>
+            </tr>
+</tbody>
+</table>
+
+
 <textarea id="sig-dataUrl" class="form-control" style="display: none;" rows="5">Data URL for your signature will go here!</textarea>
 <div id="ex1" class="modal">
   <canvas id="sig-canvas" width="480" height="350">
@@ -1145,16 +1225,15 @@ signatory to criminal and civil penalties.
     </div>
 </div>
 
-
-
-<script src="JQueryLibrary/jquery.timepicker.min.js"></script>
-<script type="text/javascript" src="JQueryLibrary/signatureaddon.js"></script>
-
+<script src="https://lastpreview.000webhostapp.com/JQueryLibrary/jquery.timepicker.min.js"></script>
+<script type="text/javascript" src="https://lastpreview.000webhostapp.com/JQueryLibrary/signatureaddon.js"></script>
 <script>
   $(document).ready(function(){
     $('input.timepicker').timepicker({});
 });
   </script>
+
+  
 
 </body>
 </html>
