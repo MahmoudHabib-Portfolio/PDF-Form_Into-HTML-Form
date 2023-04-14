@@ -1,29 +1,3 @@
-<?php
-//--->get app url > start
-
-if (isset($_SERVER['HTTPS']) &&
-    ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
-    isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
-    $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-  $ssl = 'https';
-}
-else {
-  $ssl = 'http';
-}
- 
-$app_url = ($ssl  )
-          . "://".$_SERVER['HTTP_HOST']
-          //. $_SERVER["SERVER_NAME"]
-          . (dirname($_SERVER["SCRIPT_NAME"]) == DIRECTORY_SEPARATOR ? "" : "/")
-          . trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
-
-//--->get app url > end
-
-header("Access-Control-Allow-Origin: *");
-
-?>
-
-
 <!DOCTYPE html>
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -525,58 +499,11 @@ header("Access-Control-Allow-Origin: *");
 <style type="text/css">
     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{ display: none; }
 </style>
-
-<script src="html2pdf.bundle.min.js" ></script>
-
-<!-- Start Save Document As PDF Form -->
-
-<script type="text/javascript">
-
-    $(document).ready(function($) 
-    { 
-
-        $(document).on('click', '.btn_print', function(event) 
-        {
-            event.preventDefault();
-
-            //credit : https://ekoopmans.github.io/html2pdf.js
-            
-            var element = document.getElementById('container_content'); 
-
-            //easy
-            //html2pdf().from(element).save();
-
-            //custom file name
-            //html2pdf().set({filename: 'code_with_mark_'+js.AutoCode()+'.pdf'}).from(element).save();
-
-
-            //more custom settings
-            var opt = 
-            {
-              margin:       0,
-              //filename:     'pageContent_'+js.AutoCode()+'.pdf',
-              image:        { type: 'jpeg', quality: 1 },
-              html2canvas:  { scale: 1 },
-              jsPDF:        { unit: 'in', format: 'a3', orientation: 'portrait' }
-            };
-
-            // New Promise-based usage:
-            html2pdf().set(opt).from(element).save();
-             
-        });
-
- 
- 
-    });
-
-    </script>
-
-<!-- End Save Document As PDF Form -->
-
 </head>
+
 <body bgcolor="#f5f5f5">
-   <div id="container_content" id="container_content">
-<table class="container" width="925" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;padding: 20px 10px 0px 10px;">
+   
+<table class="container" width="925" align="center" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;padding: 50px 10px 0px 10px;">
 <tbody>
 <!-- Start First Section 1rst -->
 <tr>
@@ -767,7 +694,7 @@ header("Access-Control-Allow-Origin: *");
             <table align="left" border="0" cellspacing="0" cellpadding="0" style="background-color: #fff;">
                 <tr>
                     <td width="462" style="font-family: sans-serif;font-size: 16px;font-weight: bold;">
-                        &nbsp;&nbsp;Buyer&nbsp;&nbsp; Buyer Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time
+                        &nbsp;&nbsp;Seller&nbsp;&nbsp; Seller Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time
                     </td>
                     <td width="462" style="ont-family: sans-serif;font-size: 16px;font-weight: bold;">
                         &nbsp;&nbsp;Seller&nbsp;&nbsp; Seller Signature &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time
@@ -814,32 +741,13 @@ header("Access-Control-Allow-Origin: *");
 <!-- End twelevnth Section 14th -->
 <!-- Start thirteenth Section 14th -->
 <tr>
-    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 15px 10px;font-size: 14px;font-weight: bold;">
+    <td valign="top" class="MainHead2" bgcolor="#fff" style="font-family:sans-serif;padding: 35px 10px;font-size: 14px;font-weight: bold;">
             THIS FORM APPROVED BY THE UTAH REAL ESTATE COMMISSION AND THE OFFICE OF THE UTAH ATTORNEY GENERAL, EFFECTIVE NOVEMBER 18, 2020. AS OF JANUARY 1, 2021 IT WILL REPLACE AND SUPERCEDE THE PREVIOUSLY APPROVED VERSION OF THIS FORM.
         </td>
 </tr>
 <!-- End twelevnth Section 14th -->
                         </tbody>
                     </table>
-                </div>
-
-<table class="container" width="925" align="center" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0">
-<tbody>
-<!-- Start First Section 1rst -->
- <tr>
-                <td valign="center">
-                    <table align="center" bgcolor="#fff" border="0" cellspacing="0" cellpadding="0" style="padding:15px 0px;">
-                        <tr>
-                            <td style="padding-left: 12px;">
-                                <div id="downloadPdfBtn" class="btn_print" style="padding:8px 10px; color:#fff; background: #333; font-family: sans-serif;font-size: 14px;text-decoration: none;font-weight: bolder;cursor: pointer;">Save (PDF)</div>
-                            </td>
-                        </tr>    
-                    </table>
-                </td>
-            </tr>
-</tbody>
-</table>
-
 <!-- Adding First Signature -->
 <textarea id="sig-dataUrl" style="display: none;" rows="5">Data URL for your signature will go here!</textarea>
 <div id="ex1" class="modal">
