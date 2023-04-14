@@ -1,29 +1,3 @@
-<?php
-//--->get app url > start
-
-if (isset($_SERVER['HTTPS']) &&
-    ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
-    isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&
-    $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
-  $ssl = 'https';
-}
-else {
-  $ssl = 'http';
-}
- 
-$app_url = ($ssl  )
-          . "://".$_SERVER['HTTP_HOST']
-          //. $_SERVER["SERVER_NAME"]
-          . (dirname($_SERVER["SCRIPT_NAME"]) == DIRECTORY_SEPARATOR ? "" : "/")
-          . trim(str_replace("\\", "/", dirname($_SERVER["SCRIPT_NAME"])), "/");
-
-//--->get app url > end
-
-header("Access-Control-Allow-Origin: *");
-
-?>
-
-
 <!DOCTYPE html>
 <html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -534,7 +508,7 @@ header("Access-Control-Allow-Origin: *");
                                                         <h6 style="margin:0px;">RV- F1315401 (Rev. 01-21)</h6>
                                                     </div>
                                                     <div style="position: relative; top: 20px; left: 0px;">
-                                                    <img src="<?php echo $app_url?>/f1315401Fill-in.jpg" width="100" alt="TENNESSEE DEPARTMENT OF REVENUE-Logo" />
+                                                    <img src="f1315401Fill-in.jpg" width="100" alt="TENNESSEE DEPARTMENT OF REVENUE-Logo" />
                                                     </div>
                                                     <div style="text-align: center;">
                                                     <h3 style="margin:0px !important;">TENNESSEE DEPARTMENT OF REVENUE</h3>
